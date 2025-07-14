@@ -1,6 +1,7 @@
 // webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin"); // ✅ NEW
 
 module.exports = {
   mode: "development",
@@ -20,10 +21,14 @@ module.exports = {
     open: true,
     port: 8080,
   },
-  
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/template.html",
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: 'public', to: '.' }, // ✅ Copy everything in /public to /dist
+      ],
     }),
   ],
   module: {
@@ -32,10 +37,6 @@ module.exports = {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
-     /* {
-        test: /\.html$/i,
-        loader: "html-loader",
-      }, */
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",

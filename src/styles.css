@@ -251,7 +251,8 @@ margin: 0 auto
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    padding: 20px;
 }
 
 #drinkMenu, #foodMenu, #completeBreakfast, #additionalMenu {

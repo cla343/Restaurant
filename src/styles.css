@@ -245,13 +245,22 @@ margin: 0 auto
     justify-content: space-around;
 }
 
-#drinkMenu, #foodMenu {
+#breakfastDiv, #additionalMenu {
+    color: white;
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#drinkMenu, #foodMenu, #completeBreakfast, #additionalMenu {
     width: 40%;
     display: flex;
     flex-direction: column;
 }
 
-.drinkMenuTitle, .foodMenuTitle {
+.drinkMenuTitle, .foodMenuTitle, .breakfastMenuTitle, .additionalMenuTitle {
     background-color: white;
     color: black;
     font-size: 40px;
@@ -259,7 +268,7 @@ margin: 0 auto
     padding: 10px;
 }
 
-.menuTitle {
+.menuTitle, .breakfastTitle {
     text-align: center;
     font-size: 50px;
     font-weight: bold;
@@ -269,4 +278,10 @@ margin: 0 auto
 
 .menu-item {
     padding-bottom: 10px;
+}
+
+#menuContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
